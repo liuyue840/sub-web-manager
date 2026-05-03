@@ -10,7 +10,7 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/liuyue840/sub-web-manager/main/install.sh)
 ```
 
-**注意：** 安装前请将一键安装脚本中的 `liuyue840` 替换为您自己的 GitHub 用户名。
+*(注：如果您将本项目 Fork 到自己的 GitHub 账号下，请将上述命令中的 `liuyue840` 替换为您自己的 GitHub 用户名。)*
 
 ## 使用说明
 
