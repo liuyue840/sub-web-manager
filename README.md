@@ -2,14 +2,23 @@
 
 一个轻量级的代理节点订阅管理面板。可以将零散的代理节点链接（如 `hysteria2://...`、`vless://...` 等）集中管理，并生成一个客户端可以直接更新的 Base64 订阅链接。
 
-## 一键安装
+## 一键安装 (标准 Linux，如 Debian/Ubuntu/CentOS)
 
-在任何一台 Linux 服务器上运行以下命令即可一键安装：
+在任何一台标准的 Linux 服务器上运行以下命令即可一键安装：
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/liuyue840/sub-web-manager/main/install.sh)
 ```
 
+## 一键安装 (OpenWrt 路由器)
+
+如果您想将面板部署在 OpenWrt 路由器上，请通过 SSH 连接到路由器，然后运行以下命令：
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/liuyue840/sub-web-manager/main/install_openwrt.sh)"
+```
+
+*(注：OpenWrt 需要有足够的存储空间来安装 Python3 和 Flask 库。)*
 
 ## 使用说明
 
@@ -21,4 +30,4 @@ bash <(curl -fsSL https://raw.githubusercontent.com/liuyue840/sub-web-manager/ma
 
 - 极简设计，基于 Flask，单文件运行。
 - 自动将节点链接 Base64 编码，适配绝大多数代理客户端。
-- 包含一键安装脚本，自动配置 systemd 守护进程，开机自启。
+- 包含一键安装脚本，自动配置守护进程（Linux 采用 Systemd，OpenWrt 采用 procd），开机自启。
